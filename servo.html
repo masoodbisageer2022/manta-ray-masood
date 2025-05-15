@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>3D Modelling | Manta Ray</title>
+  <title>Servo Atuation | Manta Ray</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -68,7 +68,7 @@
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade" img src="assets/img/manta-ray.png">
       <div class="container position-relative">
-        <h1>Haptic Sculpting</h1>
+        <h1>Servo Actuation</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -86,23 +86,22 @@
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <h4>Sculpting the design with Haptic Pen</h4>
-            <p>The entire skeletal structure of the bio-inspired manta ray was designed using Onshape, a cloud-based CAD platform that provided the flexibility and precision required for such a complex model. The initial prototype featured a finger-like extension intended to simulate the manta ray’s fins, which was fabricated using PLA filament. However, upon testing, this design proved to be impractical—it was oversized, lacked the necessary compactness, and failed to visually resemble a manta ray.</p>
-            <img src="assets/img/finger.jpg" alt="" class="img-fluid rounded-4">
-            
-            <p> Following this, the design underwent a significant revision. A narrower body with a 3mm thickness was introduced, and specific areas were strategically cut to reduce material and increase flexibility for wing articulation. This iteration was successfully printed and performed as intended, offering the desired compactness and effective wing movement.</p>
-            <img src="assets/img/bend.jpg" alt="" class="img-fluid rounded-4">
-            
-            <p>To enhance flexibility, a hinge mechanism was later integrated to connect the wings to the central body. Onshape’s advanced design features were instrumental in accurately drafting this joint structure.</p>
-            <img src="assets/img/hinge.jpg" alt="" class="img-fluid rounded-4">
+            <h4>Using servo for the fins </h4>
+            <p>For the actuation of the manta ray’s wings, MG90S micro servo motors were chosen due to their compact form factor, sufficient torque output, and reliable compatibility with the Raspberry Pi Pico microcontroller. Each wing was operated by two dedicated servos, securely mounted within the internal body cavity. These servos controlled fishing lines attached to the outer tips of the wing segments, enabling a dynamic and responsive motion. The servo configuration employed a push-pull mechanism, where fishing wires were routed through the structure and connected to a shared gear system. This system synchronized two servos per wing, allowing them to work in unison — one rotating clockwise and the other counterclockwise. When all four servos were engaged simultaneously, this arrangement produced a fluid, oscillating motion that closely mimicked the natural undulating swim of a real manta ray. This biomechanically inspired movement was essential to achieving lifelike articulation and a realistic visual effect in the final prototype.
+            </p>
+            <img src="assets/img/servo2.jpg" alt="" class="img-fluid rounded-4">
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/intro-ray.jpg" alt="" class="img-fluid rounded-4">
-            <p>Additionally, a gear system was developed to support mechanical movement: four small gears—each connected to a servo motor—were designed to interface with four larger gears, positioned symmetrically on both the top and bottom sections of the body. This configuration enabled efficient mechanical actuation of the wings using minimal motors, streamlining the internal mechanics. The top shell of the manta ray was also modeled to enclose and protect all electronic and mechanical components, completing the structural assembly.
+            <video width="640" height="360" controls>
+              <source src="assets/img/wing.mov" type="video/mp4">
+            </video>
+            <p>(Working of the fin individually when the servo is pulled)
             </p>
-            <img src="assets/img/box_body.jpg" alt="" class="img-fluid rounded-4">
-            <p>Finally, a custom mold box was designed around each wing to facilitate the resin casting process. This allowed the team to apply the high-resolution skin texture—previously extracted from the 3D scanned fish model—onto the wings, giving them a realistic and tactile surface finish.
+            <video width="640" height="360" controls>
+              <source src="assets/img/motor.MP4" type="video/mp4">
+            </video>
+            <p>(Working of the gears)
             </p>
           </div>
 
